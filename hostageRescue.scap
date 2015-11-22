@@ -1,61 +1,93 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ScappleDocument ID="30B0A134-8034-4EF2-AC37-AAB40E153336" Version="1.1">
    <Notes>
-      <Note Width="71.9604" FontSize="12" ID="0" Position="457.0,83.6">
+      <Note Width="78.9429" FontSize="12" ID="0" Position="480.5,50.8">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
-         <String>Play Scene</String>
+         <String>Scene: Play </String>
+         <ConnectedNoteIDs>8</ConnectedNoteIDs>
       </Note>
-      <Note Width="107.422" FontSize="12" ID="1" Position="244.5,146.9">
+      <Note Width="110.913" FontSize="12" ID="1" Position="191.4,146.1">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
-         <String>background layer </String>
+         <String>layer: background </String>
+         <ConnectedNoteIDs>7-8</ConnectedNoteIDs>
       </Note>
-      <Note Width="104.578" FontSize="12" ID="2" Position="481.2,199.2">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>sprite: turn plate  </String>
-      </Note>
-      <Note Width="108.093" FontSize="12" ID="3" Position="478.1,255.5">
+      <Note Width="108.093" FontSize="12" ID="3" Position="375.0,195.3">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
          <String>sprite: turn rescue</String>
+         <ConnectedNoteIDs>2, 10</ConnectedNoteIDs>
       </Note>
-      <Note Width="68.9575" FontSize="12" ID="4" Position="632.0,149.2">
+      <Note Width="75.9399" FontSize="12" ID="4" Position="726.6,150.8">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
-         <String>touch layer</String>
+         <String>layer: touch </String>
+         <ConnectedNoteIDs>5, 8</ConnectedNoteIDs>
       </Note>
-      <Note Width="89.2334" FontSize="12" ID="5" Position="618.0,198.4">
+      <Note Width="89.2334" FontSize="12" ID="5" Position="721.1,194.5">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
          <String>sprite: weapon</String>
+         <ConnectedNoteIDs>4</ConnectedNoteIDs>
       </Note>
-      <Note Width="99.4995" FontSize="12" ID="6" Position="735.2,198.4">
+      <Note Width="99.4995" FontSize="12" ID="6" Position="541.4,196.9">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
          <String>sprite: handcuffs</String>
+         <ConnectedNoteIDs>9-10</ConnectedNoteIDs>
       </Note>
-      <Note Width="114.404" FontSize="12" ID="7" Position="234.4,189.8">
+      <Note Width="114.404" FontSize="12" ID="7" Position="186.7,199.2">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
          <String>sprite: background </String>
+         <ConnectedNoteIDs>1</ConnectedNoteIDs>
+      </Note>
+      <Note Width="70.0928" FontSize="12" ID="8" Position="483.6,101.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>layer: Play </String>
+         <ConnectedNoteIDs>0-1, 4, 10</ConnectedNoteIDs>
+      </Note>
+      <Note Width="97.5952" FontSize="12" ID="10" Position="468.0,140.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String> layer: turn plate</String>
+         <ConnectedNoteIDs>3, 6, 8</ConnectedNoteIDs>
+      </Note>
+      <Note Width="92.7246" FontSize="12" ID="2" Position="382.0,238.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>animation: face</String>
+         <ConnectedNoteIDs>3</ConnectedNoteIDs>
+      </Note>
+      <Note Width="52.6367" FontSize="12" ID="9" Position="564.8,239.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>?: on/off</String>
+         <ConnectedNoteIDs>6</ConnectedNoteIDs>
       </Note>
    </Notes>
    <BackgroundShapes/>

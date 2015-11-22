@@ -13,6 +13,12 @@
 
     "jsList" : [
         "src/resource.js",
-        "src/app.js"
+
+        "src/config/GameConfig.js",
+
+        "src/gamePlay/scene/GamePlay.js",
+        "src/gamePlay/layer/GPBackgroundLayer.js",
+        "src/gamePlay/layer/GPTurnPlate.js",
+        "src/gamePlay/layer/GPTouchLayer.js"
     ]
 }

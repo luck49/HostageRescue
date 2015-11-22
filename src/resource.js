@@ -1,5 +1,9 @@
 var res = {
-    HelloWorld_png : "res/HelloWorld.png",
+    bg_png : "res/bg.png",
+    tp_png : "res/tp.png",
+    host_png : "res/hostage.png",
+    handcaf_png : "res/hc.png"
+
 };
 
 var g_resources = [];
