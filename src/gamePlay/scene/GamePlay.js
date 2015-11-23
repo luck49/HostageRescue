@@ -7,7 +7,7 @@ var PlayLayer = cc.Layer.extend({
 
     _BackGround_layer:null,
     _TurnPlate_layer:null,
-    _Touch_layer:null,
+    _ShootLayer:null,
 
     ctor:function () {
         this._super();
@@ -23,7 +23,7 @@ var PlayLayer = cc.Layer.extend({
 
         this.addTurnPlate();
 
-        this.addTouchLayer();
+        this.addShootLayer();
 
     },
 
@@ -37,9 +37,9 @@ var PlayLayer = cc.Layer.extend({
         this.addChild(this._TurnPlate_layer);
     },
 
-    addTouchLayer : function(){
-        this._Touch_layer = new GPTouchLayer();
-        this.addChild(this._Touch_layer);
+    addShootLayer : function(){
+        this._ShootLayer = new GPShootLayer();
+        this.addChild(this._ShootLayer);
     }
 });
 

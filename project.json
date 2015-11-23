@@ -18,7 +18,12 @@
 
         "src/gamePlay/scene/GamePlay.js",
         "src/gamePlay/layer/GPBackgroundLayer.js",
-        "src/gamePlay/layer/GPTurnPlate.js",
-        "src/gamePlay/layer/GPTouchLayer.js"
+        "src/gamePlay/layer/GPTurnPlateLayer.js",
+        "src/gamePlay/layer/GPShootLayer.js",
+
+        "src/gamePlay/sprite/TurnPlateSprite.js",
+        "src/gamePlay/sprite/HostageSprite.js",
+        "src/gamePlay/sprite/HandCuffSprite.js",
+        "src/gamePlay/sprite/DartSprite.js"
     ]
 }

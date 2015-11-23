@@ -2,7 +2,8 @@ var res = {
     bg_png : "res/bg.png",
     tp_png : "res/tp.png",
     host_png : "res/hostage.png",
-    handcaf_png : "res/hc.png"
+    handcaf_png : "res/hc.png",
+    fb_png : "res/fb.png"
 
 };
 

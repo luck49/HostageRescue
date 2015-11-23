@@ -2,6 +2,8 @@
  * Created by LJJ on 2015/11/23.
  */
 
+var g_GPTurnPlate;
+
 var GPTurnPlate = cc.Layer.extend({
     _TurnPlate : null,
     _Hostage : null,
@@ -18,36 +20,24 @@ var GPTurnPlate = cc.Layer.extend({
 
         this.Rotate();
 
+        g_GPTurnPlate = this;
     },
 
     initTurnPlate : function(){
-        this._TurnPlate = new cc.Sprite(res.tp_png);
-        this._TurnPlate.attr({
-            x: GC.w_2,
-            y: GC.h_2
-        });
-        this.addChild(this._TurnPlate);
-
-
+        this._TurnPlate = new TurnPlateSprite();
+        this.addChild(this._TurnPlate,4);
     },
 
     initHostage : function(){
-        this._Hostage = new cc.Sprite(res.host_png);
-        this._Hostage.attr({
-            x: GC.w_2,
-            y: GC.h_2
-        });
-        this.addChild(this._Hostage);
+        this._Hostage = new HostageSprite();
+        this.addChild(this._Hostage,5);
+
     },
 
     initHandCuff : function(){
-        this._HandCuff = new cc.Sprite(res.handcaf_png);
-        this._HandCuff.attr({
-            x: GC.w_2-60,
-            y: GC.h_2-60
-        });
-        this.addChild(this._HandCuff);
+        this._HandCuff = new HandCuffSprite();
 
+        this.addChild(this._HandCuff,6);
     },
 
     Rotate : function() {
@@ -56,6 +46,18 @@ var GPTurnPlate = cc.Layer.extend({
 
         // 运行一个动作
         this.runAction(rotation);
-    }
+    },
+
 
 });
+
+GPTurnPlate.initfb = function(touch) {
+    var dd = touch.getLocation();
+    var pp = g_GPTurnPlate.convertToNodeSpace(dd);
+    var fd = new cc.Sprite(res.fb_png);
+    //
+    fd.setPosition(pp.x,pp.y);
+    g_GPTurnPlate.addChild(fd,60);
+
+}
+
