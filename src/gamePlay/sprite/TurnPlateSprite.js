@@ -54,7 +54,7 @@ var TurnPlateSprite = cc.Sprite.extend({
                     return false;
                 }
                 cc.log("onTouch");
-                GPTurnPlate.initfb(touch);
+                GPShootLayer.initfbaction(touch);
                 return true;
             },
             onTouchEnded: function (touch, event) {

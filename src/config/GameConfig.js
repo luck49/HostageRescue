@@ -13,3 +13,7 @@ GC.w_2 = GC.winSize.width / 2 ;
 
 GC.h_2 = GC.winSize.height / 2;
 
+var TAG_SPRITE_MANAGER = 1;
+
+var TAG_SPRITE_DartAction = 2;
+

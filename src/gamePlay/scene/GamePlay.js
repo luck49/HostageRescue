@@ -39,7 +39,7 @@ var PlayLayer = cc.Layer.extend({
 
     addShootLayer : function(){
         this._ShootLayer = new GPShootLayer();
-        this.addChild(this._ShootLayer);
+        this.addChild(this._ShootLayer,50);
     }
 });
 
