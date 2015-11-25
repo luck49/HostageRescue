@@ -34,7 +34,7 @@ GPShootLayer.initfbaction = function(touch) {
     var onComplete = cc.callFunc(g_GPShoot.initTurnPlateDart, g_GPShoot, dd);
 
     var batch = g_GPShoot._Dart._dartBatchNode;
-
+    cc.log("initfbaction");
     var sprite = new cc.Sprite(batch.texture);
     batch.addChild(sprite);
     sprite.x = dd.x+20;

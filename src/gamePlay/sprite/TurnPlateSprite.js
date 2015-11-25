@@ -1,7 +1,9 @@
 /**
  * Created by LJJ on 2015/11/23.
  */
-
+var time = 1;
+var listener;
+var TPSprite;
 var TurnPlateSprite = cc.Sprite.extend({
     _bornSprite : null,
     _Radius : null,
@@ -10,7 +12,7 @@ var TurnPlateSprite = cc.Sprite.extend({
     ctor: function() {
 
         this._super();
-
+        TPSprite = this;
         this.initBornSprite();
         this.initListen();
 
@@ -44,32 +46,51 @@ var TurnPlateSprite = cc.Sprite.extend({
 
 
     initListen : function(){
-        var listener = cc.EventListener.create({
+        listener = cc.EventListener.create({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             swallowTouches : false,
-            onTouchBegan: function (touch, event) {
-                var target = event.getCurrentTarget();
-                cc.log("onTouch:",target);
-                if (!target.isTouchInPlate(touch)){
-                    return false;
-                }
-                cc.log("onTouch");
-                GPShootLayer.initfbaction(touch);
-                return true;
-            },
+            onTouchBegan: this.TouchAction,
+
             onTouchEnded: function (touch, event) {
                 var target = event.getCurrentTarget();
+                cc.log("onTouchend");
+
             },
             onTouchCancelled : function(touch, event){
                 var target = event.getCurrentTarget();
             }
+
+
         });
         cc.eventManager.addListener(listener, this);
 
 
+    },
+
+    TouchAction: function (touch, event) {
+        var target = event.getCurrentTarget();
+        cc.log("onTouch:",target);
+        if (!target.isTouchInPlate(touch)){
+            return false;
+        }
+        cc.log("onTouch");
+
+        time = setTimeout(TurnPlateSprite.timerOver,700);
+
+        listener.onTouchBegan = this.donothing;
+
+
+        GPShootLayer.initfbaction(touch);
+        return true;
+    },
+
+    donothing : function() {
+        cc.log("onTouch");
+        return true;
     }
-
-
-
 });
 
+TurnPlateSprite.timerOver= function() {
+    cc.log("timerOver");
+    listener.onTouchBegan = TPSprite.TouchAction;
+}

@@ -60,7 +60,7 @@ var GPTurnPlate = cc.Layer.extend({
 });
 
 GPTurnPlate.initfb = function(dd) {
-    cc.log("test.",dd);
+    cc.log("initfb");
     //var dd = touch.getLocation();
     var pp = g_GPTurnPlate.convertToNodeSpace(dd);
     //var fd = new cc.Sprite(res.fb_png);
