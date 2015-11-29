@@ -37,9 +37,11 @@ GPShootLayer.initfbaction = function(touch) {
     cc.log("initfbaction");
     var sprite = new cc.Sprite(batch.texture);
     batch.addChild(sprite);
-    sprite.x = dd.x+20;
-    sprite.y = dd.y+20;
-    var action = cc.moveTo(1, cc.p(dd.x, dd.y));
+    sprite.setSkewX(135);
+    sprite.x = 320;
+    sprite.y = 0;
+    var action = cc.spawn(cc.moveTo(1, cc.p(dd.x, dd.y)),
+                                cc.rotateBy(1, -720));
     var seqAction = cc.sequence(action, cc.callFunc(g_GPShoot.removeFromParentAndCleanup, sprite, true),onComplete);
 
     sprite.runAction(seqAction);

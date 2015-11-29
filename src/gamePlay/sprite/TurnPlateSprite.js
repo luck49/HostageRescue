@@ -21,10 +21,13 @@ var TurnPlateSprite = cc.Sprite.extend({
 
     initBornSprite: function () {
         this._bornSprite = new cc.Sprite(res.tp_png);
+        var anchor = this._bornSprite.getAnchorPoint();
+        cc.log("anchor : ", anchor);
         this._bornSprite.attr({
-            x: GC.w_2,
-            y: GC.h_2
+            x: TurnPoint_w,
+            y: TurnPoint_h
         });
+
         this.setName("turn plate");
         this._Radius = 150;
         this.addChild(this._bornSprite);

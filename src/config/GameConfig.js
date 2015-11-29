@@ -13,6 +13,9 @@ GC.w_2 = GC.winSize.width / 2 ;
 
 GC.h_2 = GC.winSize.height / 2;
 
+var TurnPoint_w = GC.w_2;
+var TurnPoint_h = GC.h_2;
+
 var TAG_SPRITE_MANAGER = 1;
 
 var TAG_SPRITE_DartAction = 2;

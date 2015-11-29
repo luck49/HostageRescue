@@ -10,6 +10,8 @@ var Dart = cc.Sprite.extend({
         this._super();
 
         this._dartBatchNode = new cc.SpriteBatchNode(res.fb_png, 5);
+        //this._dartBatchNode.x=320;
+        //this._dartBatchNode.y=0;
         this.addChild(this._dartBatchNode, 0, TAG_SPRITE_MANAGER);
 
     }

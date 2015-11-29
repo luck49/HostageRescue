@@ -28,8 +28,13 @@ var PlayLayer = cc.Layer.extend({
     },
 
     addBackgroundLayer : function(){
-        this._BackGround_layer = new GPBackgroundLayer();
+        //this._BackGround_layer = new GPBackgroundLayer();
+        //this.addChild(this._BackGround_layer);
+        this._BackGround_layer = new cc.LayerColor(cc.color(24, 122, 71));
         this.addChild(this._BackGround_layer);
+        var layer = new cc.LayerColor(cc.color(0, 0, 0));
+        layer.setContentSize(320,90);
+        this.addChild(layer,5);
     },
 
     addTurnPlate : function(){

@@ -12,17 +12,30 @@ var GPTurnPlate = cc.Layer.extend({
     ctor : function(){
 
         this._super();
+        //this.setContentSize(GC.w_2, GC.h_2 );
+        this.setPosition(0 , 50 );
 
+
+        //this.attr({
+        //    x: TurnPoint_w,
+        //    y: TurnPoint_h
+        //});
+        //this.setContentSize(320,480-90);
+        //this.setPosition(TurnPoint_w, TurnPoint_h);
+        //this.setPosition(0, TurnPoint_h);
         this.initTurnPlate();
 
         this.initHostage();
 
-        this.initHandCuff();
+        //this.initHandCuff();
 
         this.initDart();
 
         this.Rotate();
-
+        var anchor = this.getAnchorPoint();
+        cc.log("anchor : ", anchor);
+        var position = this.getPosition();
+        cc.log("anchor : ", position);
         g_GPTurnPlate = this;
     },
 
@@ -49,8 +62,9 @@ var GPTurnPlate = cc.Layer.extend({
     },
 
     Rotate : function() {
-        var rotation = cc.rotateBy(1, 90).repeatForever();
-        rotation.setTag(99);
+        var rotation = cc.rotateBy(3, 90).repeatForever();
+        //rotation.
+        //rotation.setTag(99);
 
         // 运行一个动作
         this.runAction(rotation);
